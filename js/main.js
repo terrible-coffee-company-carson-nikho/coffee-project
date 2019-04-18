@@ -1,9 +1,11 @@
 "use strict";
 
-// Populates HTML Div element with coffee array
 function renderCoffee(coffee) {
-    var html = '<li class="my-3"><div class= "col coffee-card px-0 mx-5 mb-0 mt-0"><h3>' + coffee.name + '</h3>';
-    html += '<p class="pl-1">' + coffee.roast + '</p></div></li>';
+    var html = '<tr class="coffee">';
+    html += '<td>' + coffee.id + '</td>';
+    html += '<td>' + coffee.name + '</td>';
+    html += '<td>' + coffee.roast + '</td>';
+    html += '</tr>';
 
     return html;
 }
