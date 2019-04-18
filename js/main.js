@@ -50,7 +50,11 @@ function updateCoffees(e) {
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
-        // CARSON ADD
+
+
+
+
+// CARSON ADD
 // Adds new coffee to coffees[] array, then
 // displays new list of coffees
 function addCoffee(e) {
@@ -66,9 +70,8 @@ function addCoffee(e) {
 }
         // CARSON ADD
 
-
-
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
+
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
@@ -99,18 +102,10 @@ var userSubmit = document.querySelector('#user-submit');
 
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
-
-
-
-
-
-
 
 
 // Listeners
-console.log(submitButton.addEventListener('click', updateCoffees));
-roastSelection.addEventListener('change', updateCoffees);
+
 userSubmit.addEventListener('click', addCoffee);
-coffeeSearch.addEventListener('input', updateCoffees);
+
 

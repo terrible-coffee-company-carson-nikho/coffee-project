@@ -85,6 +85,7 @@
             <div id="cp-test-background" class="col-sm-12 col-md-6 cp-show-coffees">
                 <h1 class="cp-choose-heading-right-side">Choose coffee you <i class="cp-fas-heart fas fa-heart"></i></h1>
                 <div id="coffees"></div>
+                <input oninput="updateResult(this.value)" type="search" placeholder="Search..." />
             </div>
         </div>
     </div>
@@ -171,7 +172,7 @@
 <script src='js/mapbox-geocoder-utils.js'></script>
 <script src='js/mapbox-js.js'></script>
 <script src='js/coffee.js'></script>
-<!--<script src="js/main.js"></script>-->
+<script src="js/main.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>

@@ -22,18 +22,18 @@ let originalCoffee = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-let coffees = originalCoffee.reverse();
+let coffeesNew = originalCoffee.reverse();
 
-let lightCoffee =   coffees.filter(lCoff => lCoff.roast == 'light');
-let medCoffee =     coffees.filter(mCoff => mCoff.roast == 'medium');
-let darkCoffee =    coffees.map((dCoff) => {
+let lightCoffee =   coffeesNew.filter(lCoff => lCoff.roast == 'light');
+let medCoffee =     coffeesNew.filter(mCoff => mCoff.roast == 'medium');
+let darkCoffee =    coffeesNew.map((dCoff) => {
     return dCoff.id + dCoff.name + dCoff.roast;
 });
 
 
-let allCoffees =    coffees.map(coffee => "<p>" + coffee.id + ". " + coffee.name + " " + coffee.roast + "</p>").join('');
+let allCoffees =    coffeesNew.map(coffee => "<p>" + coffee.id + ". " + coffee.name + " " + coffee.roast + "</p>").join('');
 
-let allCoffee = coffees.filter(aCoff => {
+let allCoffee = coffeesNew.filter(aCoff => {
     let p = document.createElement('p');
     p.innerText = aCoff.id + ' . ';
     p.innerText += ' name: ' + aCoff.name;
@@ -73,6 +73,12 @@ mouseEventE();
 // Create function that takes in event listener and displays the correct coffee based on mouse enter
 
 
+
+/// search function
+
+
+function updateResult(query) {
+}
 
 
 
