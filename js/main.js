@@ -99,8 +99,18 @@ var userSubmit = document.querySelector('#user-submit');
 
 tbody.innerHTML = renderCoffees(coffees);
 
+submitButton.addEventListener('click', updateCoffees);
+
+
+
+
+
+
+
+
 // Listeners
 console.log(submitButton.addEventListener('click', updateCoffees));
 roastSelection.addEventListener('change', updateCoffees);
 userSubmit.addEventListener('click', addCoffee);
 coffeeSearch.addEventListener('input', updateCoffees);
+
