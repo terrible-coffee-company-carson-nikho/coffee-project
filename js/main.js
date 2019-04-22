@@ -1,12 +1,6 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
-
     var html = '<div class="col-12 col-med-6 col-lg-6">';
     html += '<h5 style="font-weight: bold; color: #000">' + coffee.name + '</h5>';
     html += '<p><span>' + coffee.roast + '</span></p>';
@@ -50,21 +44,6 @@ var coffeeSearch = () => {
 
 ////// Add Coffee ////////
 
-// CARSON ADD
-// Adds new coffee to coffees[] array, then
-// displays new list of coffees
-function addCoffee(e) {
-    e.preventDefault();
-    var newCoffee = {
-        id: coffees.length + 1,
-        name: nameAdd.value,
-        roast: roastAdd.value
-    };
-    console.log(newCoffee);
-    coffees.push(newCoffee);
-    tbody.innerHTML = renderCoffees(coffees);
-}
-        // CARSON ADD
 var addCoffee = input => {
     input.preventDefault();
 
