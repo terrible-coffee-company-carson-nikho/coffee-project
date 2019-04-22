@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Fugaz+One|Roboto:400,700,900" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet'/>
-
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <!-- Header Section-->
@@ -46,7 +41,8 @@
 
 <!-- Landing -->
 
-<div id="cp-top" class="cp-main-landing">
+
+<div id="cp-top" class="cp-main-landing pt-5">
     <div class="cp-landing-container">
         <img class="cp-landing-logo" src="img/coffee-logo.png" alt="coffee-logo">
         <h2 class="cp-landing-brand-name">Been Roastin' Terrible Coffee</h2>
@@ -57,105 +53,93 @@
     </div>
 </div>
 
-<!-- END Landing / Jumbo -->
 
+<div id="cp-coffee" class="container">
 
-<!-- Coffee  -->
-<div id="cp-coffee" class="cp-main-coffee">
-    <div class="container-fluid">
-        <div class="row">
-
-            <div id="cp-add-id" class="col-sm col-md-6 cp-choose-coffees">
-                <div id="cp-light" class="cp-light-roast col-md-6">
-                    <h1 class="cp-light-l">L</h1>
-                </div>
-
-                <div id="cp-medium" class="cp-medium-roast col-md-6">
-                    <h1 class="cp-medium-m">M</h1>
-                </div>
-
-                <div id="cp-dark" class="cp-dark-roast col-md-6">
-                    <h1 class="cp-dark-d">D</h1>
-                </div>
-
-                <div id="cp-espresso" class="cp-espresso col-md-6">
-                    <h1 class="cp-espresso-e">E</h1>
-                </div>
+    <!--  Coffee Options / Search  / Add -->
+    <div class="row ">
+        <div class="cp-coffee-container col mt-2 p-5">
+            <div class="mb-5">
+                <label for="search__coffee" class="inp">
+                    <input id="search__coffee" placeholder="&nbsp;" class="animated slideInLeft" type="text">
+                    <span class="label">Search for your coffee</span>
+                    <span class="border"></span>
+                </label>
             </div>
-            <div id="cp-test-background" class="col-sm-12 col-md-6 cp-show-coffees">
-                <h1 class="cp-choose-heading-right-side">Choose coffee you <i class="cp-fas-heart fas fa-heart"></i></h1>
-                <div id="coffees"></div>
-                <input oninput="updateResult(this.value)" type="search" placeholder="Search..." />
+            <div>
+                <div id="coffees" class="row"></div>
             </div>
+        </div>
+
+        <div class="col-6 col-md-6 col-lg-6 mt-2 p-5">
+            <form class="cp-form">
+                <fieldset>
+                    <legend class="cp_legend w-auto">Coffee Options</legend>
+
+                    <select name="" class="roast-select" id="roast-select">
+                        <option value="light">light</option>
+                        <option value="medium">medium</option>
+                        <option value="dark">dark</option>
+                    </select>
+                    <br>
+                    <br>
+                    <input class="cp-buttons" id="submit" type="submit"/>
+                </fieldset>
+
+                <br>
+                <br>
+
+                <fieldset>
+                    <legend class="cp_legend w-auto">Add Coffee</legend>
+
+                    <select name="add__roast" class="roast-select cp-add-roast" id="add__coffee__roast">
+                        <option value="light">Light</option>
+                        <option value="medium">Medium</option>
+                        <option value="dark">Dark</option>
+                    </select>
+                    <br>
+                    <br>
+                    <div>
+                        <label for="add__coffee__name" class="inp">
+                            <input id="add__coffee__name" placeholder="&nbsp;" class="animated slideInRight"
+                                   type="text">
+                            <span class="label">Add New Coffee</span>
+                            <span class="border"></span>
+                        </label>
+                    </div>
+                    <br>
+                    <input class="cp-buttons" id="add__new__coffee" type="submit">
+
+                </fieldset>
+            </form>
         </div>
     </div>
 </div>
-<!-- END  Coffee-->
 
+<!--  End Coffee Options / Search / Add -->
 
-<!-- Add Coffee Section -->
-
-<!-- Carson Add Coffee-->
-
-<div class="row mt-5 d-flex justify-content-end">
-    <div class="col-12 col-md-4 cp-add-container">
-        <h1 class="cp-add-coffee-head"><u>Add Your Own Coffee</u></h1>
-        <br>
-        <br>
-        <h3 class="cp-add-coffee-head"><u>Type of Roast</u></h3>
-        <br>
-        <br>
-        <label for="roast-add">
-            <select id="roast-add">
-                <option value="light">Light</option>
-                <option value="medium">Medium</option>
-                <option value="dark">Dark</option>
-
-            <!--<button type="button" class="col-md-4 cp-add-btn-l" value="Light"><i class="fa fa-coffee" aria-hidden="true"></i><p> Light Roast</p></button>-->
-
-            <!--<button type="button" class="col-md-4 cp-add-btn-m" value="Medium"><i class="fa fa-coffee" aria-hidden="true"></i><p>Medium Roast</p></button>-->
-
-            <!--<button type="button" class="col-md-4 cp-add-btn-d" value="Dark"><i class="fa fa-coffee" aria-hidden="true"></i><p>Dark Roast</p></button>-->
-
-            <!--<div class="cp-espresso col-md-6">-->
-                <!--<h1 class="cp-espresso-e"><button type="button" class="cp-add-btn-e">E</button></h1>-->
-            <!--</div>-->
-            </select>
-        </label>
-        <br>
-        <br>
-        <h3 class="cp-add-coffee-head"><u>Coffee Name</u></h3>
-        <br>
-        <input type="text" class="input-group mb-3"  id="name-add">
-        <input id="user-submit" class="btn btn-primary btn-md btn-block"  type="submit" />
-    </div>
-
-</div>
-
-
-<!-- END ADD Coffee-->
 <!-- Footer -->
 
 <div id="cp-about" class="cp-footer-about-section">
     <div class="container-fluid">
         <div class="row">
             <div class="cp-left-side-about col-sm-6">
-                <img class="cp-about-logo" src="img/coffee-logo.png" alt="coffee-logo">
+                <img class="cp-about-logo" src="./img/coffee-logo.png" alt="coffee-logo">
             </div>
 
             <div class="cp-right-side-about col-sm-6">
 
                 <p>Like a lot of bad ideas, Terrible Coffee started at a kitchen table. It was 1982 and were hashing out
                     the notion of opening an obsessively good coffee shop in San Antonio, which needed one. Specialty
-                    coffees were taking off, along with aficionados’ desire for horrible beans, bad brewing technique
-                    and no knowledge behind the counter. </p>
+                    coffees were taking off, along
+                    with aficionados’ desire for horrible beans, bad brewing technique and no knowledge behind the
+                    counter. </p>
 
                 <p>Within a year the first horrible coffee cafe opened in San Antonio. Customer loyalty and appreciation
                     warranted opening three more cafes and the launch of our own roasting facility, Terrible Coffee &
-                    Co.
-                    We continue to source the cheapest, worst coffee in the world, hoping to improve the art and science
-                    of brewing, and
-                    as it turns out, people love horrible coffee.</p>
+                    Co. We continue to source the cheapest,
+                    worst coffee in the world, hoping to improve the art and science of brewing, and as it turns out,
+                    people love horrible coffee.</p>
             </div>
             <div id="cp-map" class="cp-mapbox col-sm-12"></div>
         </div>
@@ -176,15 +160,21 @@
 <script src='js/coffee.js'></script>
 <script src="js/main.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+<script src='js/keys.js'></script>
+<script src='js/mapbox-geocoder-utils.js'></script>
+<script src='js/mapbox-js.js'></script>
+<script src="js/dropdown.js"></script>
 <script src="js/main.js"></script>
-
 </body>
+
 </html>
