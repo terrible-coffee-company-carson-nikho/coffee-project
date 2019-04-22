@@ -81,6 +81,10 @@ fieldset {
 
 /*  End of Landing */
 
+.cp-horizontal-rule {
+    border-top: 3px double #8c8b8b;
+}
+
 .cp-form {
     margin-top: 10px;
 }
@@ -161,7 +165,7 @@ fieldset {
     border-bottom: 2px solid #000;
     background: none;
     border-radius: 0;
-    color: #fff;
+    color: #000;
     transition: all 0.15s ease;
 }
 
@@ -180,7 +184,7 @@ fieldset {
 }
 
 .inp input:focus+span {
-    color: #fff;
+    color: #000;
     transform: translateY(-26px) scale(0.75);
 }
 
